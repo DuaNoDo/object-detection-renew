@@ -1,0 +1,1 @@
+conda install -y tensorflow-gpu==1.15.0 keras-gpu==2.2.4

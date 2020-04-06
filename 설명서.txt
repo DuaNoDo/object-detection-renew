@@ -1,0 +1,38 @@
+아나콘다3 윈도우 64비트 다운로드 링크
+https://repo.anaconda.com/archive/Anaconda3-2020.02-Windows-x86_64.exe
+
+
+실행 파일 다운로드 링크
+https://github.com/DuaNoDo/object-detection/archive/master.zip
+
+"실행 파일 다운로드 링크" 파일을 다운로드 받은 뒤, 압축을 풀어준다. 풀면 "object-detection-master" 폴더 생성.
+
+mask_rcnn_coco.h5 다운로드 링크
+https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5
+
+다운받은 "mask_rcnn_coco.h5" 파일을 "object-detection-master" 폴더의 안에 넣어준다.
+
+"Anaconda Prompt (anaconda3)" 프로그램을 실행.
+
+"Anaconda Prompt (anaconda3)" 에서 cd를 사용하여 "object-detection-master"의 위치로 이동
+
+
+gpu 사용 안하는 버젼
+exec_for_cpu.bat
+
+gpu 사용 하는 버젼
+exec_for_gpu.bat
+
+
+finish 문구가 나왔다면.
+
+ "object-detection-master" 폴더 밑의 "log" 폴더 밑의 가장 최근 생성된 폴더의 이름을 복사
+
+python predict.py --dataset=../dataset/ --weights=logs/"복사된 폴더의 이름"/mask_rcnn_object_0030.h5
+
+ex) 폴더의 이름이 "object20190830T1539" 라면.
+
+python predict.py --dataset=../dataset/ --weights=logs/"object20190830T1539"/mask_rcnn_object_0030.h5
+
+위의 코드를 실행.
+
